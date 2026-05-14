@@ -1,18 +1,94 @@
-## Getting Started
+# Kiosk Ordering System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Overview
 
-## Folder Structure
+This project is a console-based **food ordering kiosk system** built in Java.  It simulates an order at a food booth where users can browse a menu, customize drinks and sandwiches and generate a final receipt.
+The project is designed to demonstrate multiple **Gang of Four Design Patterns** in a practical way.
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+# Features
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Menu System (Composite Pattern)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+The menu is structured as a tree:
 
-## Dependency Management
+- Menu
+  - Drinks
+  - Sandwiches
+  - Snacks
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Each category can contain:
+- subcategories
+- products
+
+## Drink Customization (Strategy Pattern)
+
+Users can customize drinks dynamically:
+
+- Cup size (small / medium / large)
+- Ice level (yes / no)
+- Sugar level (none / 0% / 50% / 100%)
+
+Each customization affects:
+- drink description
+- drink price
+
+## Sandwich Customization (Decorator Pattern)
+
+Users can build sandwiches by adding/removing ingredients.
+
+### Base sandwiches:
+- Chicken Sandwich
+- Veggie Sandwich
+
+### Extras:
+- Cheese (+1.0)
+- Bacon (+1.5)
+- Lettuce (+0.5)
+- Tomato (+0.5)
+- Patty (+1.5)
+
+### Features:
+- Add ingredients
+- Remove ingredients
+
+---
+
+# Design Patterns Used
+
+## Composite Pattern
+Used to represent the menu hierarchy as a tree structure.
+
+- MenuCategory contains Products and subcategories
+- Simplifies menu traversal and display
+
+## Strategy Pattern
+Used for drink customization.
+
+- Each strategy modifies the drink step-by-step
+- Updates both description and price
+  
+## Decorator Pattern
+Used for sandwich customization.
+
+- Each ingredient wraps the base sandwich
+- Adds behavior (description + cost)
+- Supports dynamic composition
+
+---
+
+# How to Run
+
+## Compile
+```bash
+javac Main.java
+```
+
+---
+
+# Authors
+
+* YannickHan
+* Kim T.
+* AntoineCrsr
