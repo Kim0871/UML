@@ -3,7 +3,9 @@
 ## Overview
 
 This project is a console-based **food ordering kiosk system** built in Java.  It simulates an order at a food booth where users can browse a menu, customize drinks and sandwiches and generate a final receipt.
-The project is designed to demonstrate multiple **Gang of Four Design Patterns** in a practical way.
+The project is designed to demonstrate multiple **Gang of Four Design Patterns** in a practical way. The code corresponds to the following class diagram, which has been refined through the use of these patterns to improve the system’s structure:
+
+<img width="1151" height="841" alt="Patterns" src="https://github.com/user-attachments/assets/a848d949-6741-42b1-a0e7-3c666b98286f" />
 
 ---
 
